@@ -11,7 +11,7 @@
 
 uint8_t _TWIS::rxBuffer0[60], _TWIS::txBuffer0[60], _TWIS::rxBuffer1[60], _TWIS::txBuffer1[60];
 
-void _TWIS::initTWIS0(uint8_t pinSDA, uint8_t pinSCL, uint8_t addr0){
+void _TWIS::initTWIS0(uint8_t pinSDA, uint8_t pinSCL, uint8_t addr){
 	// TWI Slave0 mode 초기화 함수
 	// TWI Slave0 비활성화
 	NRF_TWIS0->ENABLE = 0;
@@ -37,7 +37,7 @@ void _TWIS::initTWIS0(uint8_t pinSDA, uint8_t pinSCL, uint8_t addr0){
 	NRF_TWIS0->ENABLE = 9;
 }
 
-void _TWIS::initTWIS1(uint8_t pinSDA, uint8_t pinSCL, uint8_t addr0){
+void _TWIS::initTWIS1(uint8_t pinSDA, uint8_t pinSCL, uint8_t addr){
 	// TWI Slave1 mode 초기화 함수
 	// TWI Slave1 비활성화
 	NRF_TWIS1->ENABLE = 0;

@@ -17,8 +17,8 @@ class _TWIS{
 private:
 	static uint8_t rxBuffer0[60], txBuffer0[60], rxBuffer1[60], txBuffer1[60];
 public:
-	void initTWIS0(uint8_t pinSDA, uint8_t pinSCL, uint8_t addr0);
-	void initTWIS1(uint8_t pinSDA, uint8_t pinSCL, uint8_t addr0);
+	void initTWIS0(uint8_t pinSDA, uint8_t pinSCL, uint8_t addr);
+	void initTWIS1(uint8_t pinSDA, uint8_t pinSCL, uint8_t addr);
 	void writeByte0(uint8_t *data, uint8_t length);
 	void writeByte1(uint8_t *data, uint8_t length);
 	void readByte0(uint8_t *readData, uint8_t *length);
